@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speaking - Alisa Nurillah Auliyasin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6c5ce7;
+            --primary-dark: #4b38b3;
+            --bg-purple: #f8f7ff;
+            --accent-purple: #efebff;
+            --text-main: #2d3436;
+            --text-muted: #636e72;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(108, 92, 231, 0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-purple); color: var(--text-main); line-height: 1.6; }
+        header { position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); z-index: 1000; border-bottom: 1px solid var(--accent-purple); }
+        .navbar { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; }
+        .logo { font-size: 1.2rem; font-weight: 800; color: var(--primary-dark); text-decoration: none; }
+        .logo span { color: var(--primary); }
+        .nav-links { display: flex; gap: 15px; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 0.9rem; padding: 6px 12px; border-radius: 10px; transition: all 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary); background: var(--accent-purple); }
+        .btn-contact { background: var(--primary); color: var(--white) !important; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 120px 24px 60px; }
+        .section-title { text-align: center; margin-bottom: 40px; }
+        .section-title h2 { font-size: 2rem; color: #1a1a2e; font-weight: 800; }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+        .card { background: var(--white); padding: 28px; border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--accent-purple); }
+        .card-header-flex { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+        .card-icon { width: 44px; height: 44px; background: var(--accent-purple); color: var(--primary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+        .card h3 { font-size: 1.15rem; color: #1a1a2e; }
+        .card-sub { color: var(--primary); font-size: 0.85rem; font-weight: 600; }
+        .card-body-item { margin-bottom: 18px; padding-bottom: 15px; border-bottom: 1px dashed var(--accent-purple); }
+        .card-body-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .card-body-item h4 { font-size: 0.98rem; color: #2d3436; margin-bottom: 4px; }
+        .card-body-item p.time { font-size: 0.8rem; color: var(--primary-dark); font-weight: 600; margin-bottom: 8px; }
+        .card-body-item ul { list-style: none; padding-left: 0; }
+        .card-body-item ul li { position: relative; padding-left: 18px; font-size: 0.88rem; color: var(--text-muted); margin-bottom: 6px; }
+        .card-body-item ul li::before { content: "•"; position: absolute; left: 0; color: var(--primary); font-weight: bold; }
+        footer { text-align: center; padding: 25px; color: var(--text-muted); font-size: 0.85rem; background: var(--white); border-top: 1px solid var(--accent-purple); margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">Alisa<span>.Auliyasin</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Profil</a></li>
+                <li><a href="education.html">Pendidikan</a></li>
+                <li><a href="achievements.html">Prestasi</a></li>
+                <li><a href="experience.html">Pengalaman</a></li>
+                <li><a href="speaking.html" class="active">Speaking</a></li>
+                <li><a href="contact.html" class="btn-contact">Kontak</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="section-title">
+            <h2>Speaking & Personal Projects</h2>
+            <p>Pengalaman Pembicara Public Speaking & Inisiatif Sosial</p>
+        </div>
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-header-flex">
+                    <div class="card-icon"><i class="fa-solid fa-microphone"></i></div>
+                    <div>
+                        <h3>Speaking & Coaching</h3>
+                        <p class="card-sub">Pembicara & Masterclass</p>
+                    </div>
+                </div>
+                <div class="card-body-item">
+                    <ul>
+                        <li><b>Speaker:</b> DPD RI Goes to School ("Anak Muda Melek Politik & Tupoksi Lembaga Negara").</li>
+                        <li><b>Keynote Speaker:</b> Pemuda Parlemen Indonesia (Youth Catalyst Program).</li>
+                        <li><b>Guest Speaker & Trainer:</b> Raras Ranggala FE Universitas Mandiri (Public Speaking & Branding Masterclass).</li>
+                        <li><b>Lead Coach:</b> Coaching FKOS Board across 20+ Schools in Subang.</li>
+                        <li><b>Featured Speaker:</b> Webinar Duta Aksi Indonesia Jawa Barat (Anti-Bullying & Stunting).</li>
+                        <li><b>Broadcaster:</b> Podcast Pasundan Ekspress & Radio Benteng Pancasila.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header-flex">
+                    <div class="card-icon"><i class="fa-solid fa-heart"></i></div>
+                    <div>
+                        <h3>Social Impact</h3>
+                        <p class="card-sub">Inisiatif Sosial & Edukasi</p>
+                    </div>
+                </div>
+                <div class="card-body-item">
+                    <h4>"Cha Is Here!" (Media Edukasi & Pemberdayaan Pemuda)</h4>
+                    <p class="time">Founder & Creative Producer</p>
+                    <ul>
+                        <li>Platform multimedia pengembang diri untuk pelajar Subang di IG, YT, TikTok, & Spotify.</li>
+                    </ul>
+                </div>
+                <div class="card-body-item">
+                    <h4>Relawan Kemanusiaan</h4>
+                    <ul>
+                        <li><b>Badan Wakaf Al-Qur'an (BWA):</b> Bantuan sosial & donasi Palestina.</li>
+                        <li><b>Klinik Muhammadiyah Subang:</b> Panitia Sunat Massal Gratis.</li>
+                        <li><b>FKUB Subang:</b> Duta Pemuda Kerukunan Antar Umat Beragama.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Alisa Nurillah Auliyasin. Interactive Portfolio & CV.</p>
+    </footer>
+
+</body>
+</html>
