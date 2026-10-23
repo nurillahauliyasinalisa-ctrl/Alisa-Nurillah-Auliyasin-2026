@@ -3,16 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alisa Nurillah Auliyasin - Interactive CV & Portfolio</title>
-    <!-- Google Fonts & Font Awesome Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Profil - Alisa Nurillah Auliyasin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <style>
         :root {
             --primary: #6c5ce7;
             --primary-dark: #4b38b3;
-            --primary-light: #a29bfe;
             --bg-purple: #f8f7ff;
             --accent-purple: #efebff;
             --text-main: #2d3436;
@@ -22,376 +19,102 @@
             --shadow-hover: 0 15px 35px rgba(108, 92, 231, 0.18);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: var(--bg-purple);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-purple); color: var(--text-main); line-height: 1.6; }
 
         header {
-            position: fixed;
-            top: 0;
-            width: 100%;
+            position: fixed; top: 0; width: 100%;
             background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(12px);
-            z-index: 1000;
+            backdrop-filter: blur(12px); z-index: 1000;
             border-bottom: 1px solid var(--accent-purple);
         }
 
         .navbar {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            max-width: 1100px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
             padding: 16px 24px;
         }
 
-        .logo {
-            font-size: 1.2rem;
-            font-weight: 800;
-            color: var(--primary-dark);
-            text-decoration: none;
-        }
-
+        .logo { font-size: 1.2rem; font-weight: 800; color: var(--primary-dark); text-decoration: none; }
         .logo span { color: var(--primary); }
 
-        .nav-links {
-            display: flex;
-            gap: 20px;
-            list-style: none;
-        }
-
+        .nav-links { display: flex; gap: 15px; list-style: none; }
         .nav-links a {
-            text-decoration: none;
-            color: var(--text-main);
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: color 0.3s;
+            text-decoration: none; color: var(--text-main);
+            font-weight: 600; font-size: 0.9rem; padding: 6px 12px;
+            border-radius: 10px; transition: all 0.3s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary); background: var(--accent-purple);
         }
 
-        .nav-links a:hover { color: var(--primary); }
+        .btn-contact { background: var(--primary); color: var(--white) !important; }
+        .btn-contact:hover { background: var(--primary-dark) !important; }
 
-        .btn-contact {
-            background: var(--primary);
-            color: var(--white) !important;
-            padding: 8px 18px;
-            border-radius: 20px;
-        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 130px 24px 60px; }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 130px 0 60px;
-            display: flex;
-            align-items: center;
-            gap: 40px;
-        }
-
+        .hero { display: flex; align-items: center; gap: 40px; }
         .hero-text { flex: 1; }
 
         .badge {
-            display: inline-block;
-            background: var(--accent-purple);
-            color: var(--primary-dark);
-            padding: 6px 16px;
-            border-radius: 30px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            margin-bottom: 15px;
+            display: inline-block; background: var(--accent-purple);
+            color: var(--primary-dark); padding: 6px 16px; border-radius: 30px;
+            font-size: 0.85rem; font-weight: 700; margin-bottom: 15px;
         }
 
-        .hero-text h1 {
-            font-size: 2.5rem;
-            color: #1a1a2e;
-            line-height: 1.2;
-            margin-bottom: 10px;
-            font-weight: 800;
-        }
+        .hero-text h1 { font-size: 2.5rem; color: #1a1a2e; line-height: 1.2; margin-bottom: 10px; font-weight: 800; }
+        .hero-text .subtitle { font-size: 1.1rem; color: var(--primary); font-weight: 600; margin-bottom: 15px; }
+        .hero-text .desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 25px; }
 
-        .hero-text .subtitle {
-            font-size: 1.1rem;
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .hero-text .desc {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 25px;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 14px;
-        }
-
+        .social-icons { display: flex; gap: 14px; }
         .social-icons a {
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            background: var(--white);
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: var(--shadow);
-            text-decoration: none;
-            transition: all 0.3s;
+            width: 38px; height: 38px; border-radius: 50%;
+            background: var(--white); color: var(--primary);
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: var(--shadow); text-decoration: none; transition: all 0.3s;
         }
-
-        .social-icons a:hover {
-            background: var(--primary);
-            color: var(--white);
-            transform: translateY(-3px);
-        }
+        .social-icons a:hover { background: var(--primary); color: var(--white); transform: translateY(-3px); }
 
         .img-box {
-            width: 270px;
-            height: 340px;
-            border-radius: 24px;
-            overflow: hidden;
-            border: 6px solid var(--white);
+            width: 270px; height: 340px; border-radius: 24px;
+            overflow: hidden; border: 6px solid var(--white);
             box-shadow: var(--shadow-hover);
         }
+        .img-box img { width: 100%; height: 100%; object-fit: cover; }
 
-        .img-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Sections */
-        .section-padding { padding: 50px 0; }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .section-title h2 {
-            font-size: 1.8rem;
-            color: #1a1a2e;
-            font-weight: 800;
-        }
-
-        .section-title p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 24px;
-        }
-
-        .card {
-            background: var(--white);
-            padding: 28px;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--accent-purple);
-            margin-bottom: 20px;
-        }
-
-        .card-header-flex {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-
-        .card-icon {
-            width: 44px;
-            height: 44px;
-            background: var(--accent-purple);
-            color: var(--primary);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.1rem;
-            flex-shrink: 0;
-        }
-
-        .card h3 {
-            font-size: 1.15rem;
-            color: #1a1a2e;
-        }
-
-        .card-sub {
-            color: var(--primary);
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        .card-body-item {
-            margin-bottom: 18px;
-            padding-bottom: 15px;
-            border-bottom: 1px dashed var(--accent-purple);
-        }
-
-        .card-body-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .card-body-item h4 {
-            font-size: 0.98rem;
-            color: #2d3436;
-            margin-bottom: 4px;
-        }
-
-        .card-body-item p.time {
-            font-size: 0.8rem;
-            color: var(--primary-dark);
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .card-body-item ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .card-body-item ul li {
-            position: relative;
-            padding-left: 18px;
-            font-size: 0.88rem;
-            color: var(--text-muted);
-            margin-bottom: 6px;
-        }
-
-        .card-body-item ul li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-            font-weight: bold;
-        }
-
-        /* Tags / Badges for Skills */
-        .skills-flex {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .skill-tag {
-            background: var(--accent-purple);
-            color: var(--primary-dark);
-            padding: 6px 14px;
-            border-radius: 12px;
-            font-size: 0.82rem;
-            font-weight: 600;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            background: var(--white);
-            border-radius: 24px;
-            padding: 40px;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--accent-purple);
-            margin-bottom: 60px;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-
-        .form-group { margin-bottom: 15px; }
-
-        .form-group label {
-            display: block;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 10px 14px;
-            border-radius: 10px;
-            border: 1px solid #dfe6e9;
-            background: var(--bg-purple);
-            font-size: 0.9rem;
-            outline: none;
-        }
-
-        .btn-submit {
-            background: var(--primary);
-            color: var(--white);
-            border: none;
-            padding: 12px;
-            border-radius: 10px;
-            font-weight: 700;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        footer {
-            text-align: center;
-            padding: 25px;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            background: var(--white);
-            border-top: 1px solid var(--accent-purple);
-        }
+        footer { text-align: center; padding: 25px; color: var(--text-muted); font-size: 0.85rem; background: var(--white); border-top: 1px solid var(--accent-purple); margin-top: 40px; }
 
         @media (max-width: 768px) {
             .hero { flex-direction: column-reverse; text-align: center; }
             .social-icons { justify-content: center; }
-            .contact-grid { grid-template-columns: 1fr; }
-            .nav-links { display: none; }
+            .nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVBAR -->
     <header>
         <div class="navbar">
-            <a href="#" class="logo">Alisa<span>.Auliyasin</span></a>
+            <a href="index.html" class="logo">Alisa<span>.Auliyasin</span></a>
             <ul class="nav-links">
-                <li><a href="#about">Tentang</a></li>
-                <li><a href="#education">Pendidikan</a></li>
-                <li><a href="#achievements">Prestasi</a></li>
-                <li><a href="#experience">Pengalaman</a></li>
-                <li><a href="#speaking">Speaking</a></li>
-                <li><a href="#contact" class="btn-contact">Hubungi Saya</a></li>
+                <li><a href="index.html" class="active">Profil</a></li>
+                <li><a href="education.html">Pendidikan</a></li>
+                <li><a href="achievements.html">Prestasi</a></li>
+                <li><a href="experience.html">Pengalaman</a></li>
+                <li><a href="speaking.html">Speaking</a></li>
+                <li><a href="contact.html" class="btn-contact">Kontak</a></li>
             </ul>
         </div>
     </header>
 
     <div class="container">
-        <!-- HERO SECTION -->
-        <section class="hero" id="about">
+        <section class="hero">
             <div class="hero-text">
                 <span class="badge"><i class="fa-solid fa-crown"></i> Mojang Intelegensia Subang & Best Intelegensia 2026</span>
                 <h1>Alisa Nurillah Auliyasin</h1>
-                <p class="subtitle">Public Speaker | Broadcaster | Event Director | Dual-Degree Student</p>
+                <p class="subtitle">Broadcaster | Public Speaker | Event Director | Dual-Degree Student</p>
                 <p class="desc">
-                    A high-achieving dual-degree undergraduate student in Information Systems & English Literature with proven leadership, broadcasting, event production, and public speaking expertise. Delegate of Pemuda Parlemen Indonesia (Commission III: Youth & Tourism).
+                    A high-achieving undergraduate student specializing in English Literature, Broadcasting Production, and Public Relations with proven leadership, event production, and public speaking expertise. Delegate of Pemuda Parlemen Indonesia (Commission III: Youth & Tourism).
                 </p>
                 <div class="social-icons">
                     <a href="https://instagram.com/alisa.nurillah" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -406,271 +129,12 @@
                 </div>
             </div>
         </section>
-
-        <!-- PENDIDIKAN & SKILLS -->
-        <section class="section-padding" id="education">
-            <div class="grid-2">
-                <!-- PENDIDIKAN -->
-                <div class="card">
-                    <div class="card-header-flex">
-                        <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                        <div>
-                            <h3>Higher & Secondary Education</h3>
-                            <p class="card-sub">Riwayat Pendidikan Akademis</p>
-                        </div>
-                    </div>
-                    <div class="card-body-item">
-                        <h4>Universitas Mandiri</h4>
-                        <p class="time">S1 Radio & Television Broadcasting (2025 - Present)</p>
-                        <ul>
-                            <li>Current GPA: <b>4.00 / 4.00</b> (Semester 2)</li>
-                        </ul>
-                    </div>
-                    <div class="card-body-item">
-                        <h4>Universitas Terbuka Bandung</h4>
-                        <p class="time">S1 English Literature (2025 - Present)</p>
-                        <ul>
-                            <li>Current GPA: <b>3.67 / 4.00</b> (Semester 2)</li>
-                        </ul>
-                    </div>
-                    <div class="card-body-item">
-                        <h4>SMA & SMP Muhammadiyah Subang</h4>
-                        <p class="time">Lulusan Berprestasi (Siswi Berprestasi)</p>
-                        <ul>
-                            <li>Former Chairperson of Student Council (OSIS) & IPM</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- SKILLS & LANGUAGES -->
-                <div class="card">
-                    <div class="card-header-flex">
-                        <div class="card-icon"><i class="fa-solid fa-gears"></i></div>
-                        <div>
-                            <h3>Keahlian & Bahasa</h3>
-                            <p class="card-sub">Core Competencies</p>
-                        </div>
-                    </div>
-                    <div class="card-body-item">
-                        <h4>Event Management & Directing</h4>
-                        <div class="skills-flex">
-                            <span class="skill-tag">Program Concept</span>
-                            <span class="skill-tag">Bilingual MC</span>
-                            <span class="skill-tag">Protocol & VIP Liaison</span>
-                            <span class="skill-tag">Crowd Coordination</span>
-                        </div>
-                    </div>
-                    <div class="card-body-item">
-                        <h4>Media & Communication</h4>
-                        <div class="skills-flex">
-                            <span class="skill-tag">Public Speaking</span>
-                            <span class="skill-tag">TV & Radio Broadcasting</span>
-                            <span class="skill-tag">Content Strategy</span>
-                            <span class="skill-tag">Copywriting</span>
-                        </div>
-                    </div>
-                    <div class="card-body-item">
-                        <h4>Languages</h4>
-                        <div class="skills-flex">
-                            <span class="skill-tag">Indonesian (Native/Fluent)</span>
-                            <span class="skill-tag">English (Professional Working)</span>
-                            <span class="skill-tag">Korean (Basic)</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PRESTASI LENGKAP -->
-        <section class="section-padding" id="achievements">
-            <div class="section-title">
-                <h2>Honors & Achievements</h2>
-                <p>Daftar Penghargaan & Prestasi Akademis/Non-Akademis</p>
-            </div>
-            <div class="grid-2">
-                <div class="card">
-                    <div class="card-body-item">
-                        <ul>
-                            <li><b>Delegate Pemuda Parlemen Indonesia</b> - Prov. Jawa Barat (Komite III: Kepemudaan & Pariwisata)</li>
-                            <li><b>Best Intelegensia & Best Social Media</b> - Putra Putri Parahyangan 2026</li>
-                            <li><b>Mojang Intelegensia Subang</b> - Paguyuban Mojang Jajaka Kab. Subang 2025-2026</li>
-                            <li><b>Piagam Bupati Subang</b> - Generasi Muda Berprestasi, Berkontribusi & Menginspirasi (2024)</li>
-                            <li><b>Duta Organisasi Nasional (Jawa Barat)</b> - Batch 2</li>
-                            <li><b>Gold Medal</b> - Olimpiade Bahasa Indonesia PUSKASNAS (National Level)</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body-item">
-                        <ul>
-                            <li><b>Bronze Medal</b> - Olympic English PUSKASNAS (National Level)</li>
-                            <li><b>National Finalist Speech</b> - Ismu In English, Ahmad Dahlan National Olympic</li>
-                            <li><b>Project Leader</b> - Pupuk Cangkang Telur (Sainspreneurship Program Kab. Subang)</li>
-                            <li><b>1st Place</b> - Fashion Show Competition</li>
-                            <li><b>2nd Place</b> - Konten Profil Sekolah Competition & Lomba Cerita Bergambar</li>
-                            <li><b>3rd Place</b> - Festival Film Masyarakat (HUT Bhayangkara)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PENGALAMAN KERJA & ORGANISASI -->
-        <section class="section-padding" id="experience">
-            <div class="section-title">
-                <h2>Professional & Organizational Experience</h2>
-                <p>Pengalaman Magang, Kerja Protokoler, dan Kepemimpinan Organisasi</p>
-            </div>
-            <div class="grid-2">
-                <!-- PROFESIONAL -->
-                <div class="card">
-                    <div class="card-header-flex">
-                        <div class="card-icon"><i class="fa-solid fa-briefcase"></i></div>
-                        <div>
-                            <h3>Professional & Internship</h3>
-                            <p class="card-sub">Pengalaman Kerja & Magang</p>
-                        </div>
-                    </div>
-                    <div class="card-body-item">
-                        <h4>Protokol & Komunikasi Pimpinan (PROKOMPIM) Setda Subang</h4>
-                        <p class="time">Internship - Protocol, Media & Public Relations</p>
-                        <ul>
-                            <li>Pendampingan agenda eksekutif pimpinan daerah & acara resmi protokoler.</li>
-                            <li>Produksi rilis pers, dokumentasi audio-visual, dan manajemen media publikasi.</li>
-                        </ul>
-                    </div>
-                    <div class="card-body-item">
-                        <h4>International Model United Nations (IMUN) Batch NI</h4>
-                        <p class="time">Social Media Specialist & Campus Ambassador Intern</p>
-                        <ul>
-                            <li>Merancang kampanye pemasaran digital untuk konferensi diplomasi internasional.</li>
-                            <li>Meningkatkan partisipasi pemuda melalui konten edukatif dan hubungan komunitas.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- ORGANISASI -->
-                <div class="card">
-                    <div class="card-header-flex">
-                        <div class="card-icon"><i class="fa-solid fa-users"></i></div>
-                        <div>
-                            <h3>Organizational Leadership</h3>
-                            <p class="card-sub">Kepemimpinan Organisasi Pemuda</p>
-                        </div>
-                    </div>
-                    <div class="card-body-item">
-                        <h4>Forum Komunikasi OSIS Kabupaten Subang (FKOS)</h4>
-                        <p class="time">Ketua Umum (Gen-7) / Head of Event Organization & Programming</p>
-                        <ul>
-                            <li>Memimpin aliansi ketua OSIS/MPK se-Kabupaten Subang.</li>
-                            <li>Chief Director Gathering Pengurus OSIS/MPK Se-Kabupaten Subang 2024.</li>
-                            <li>Menginisiasi kampanye Edukasi Politik Pemilih Pemula 2024.</li>
-                        </ul>
-                    </div>
-                    <div class="card-body-item">
-                        <h4>PD & PR Ikatan Pelajar Muhammadiyah (IPM) Subang</h4>
-                        <p class="time">Ketua Umum PR IPM & Ketua Bidang PIP PD IPM</p>
-                        <ul>
-                            <li>Steering Committee Pelatihan Kader Taruna Melati 1 (3 kali berturut-turut).</li>
-                            <li>Mengarahkan agenda acara untuk wilayah Subang-Purwakarta-Karawang.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SPEAKING & SOCIAL PROJECTS -->
-        <section class="section-padding" id="speaking">
-            <div class="grid-2">
-                <!-- SPEAKING -->
-                <div class="card">
-                    <div class="card-header-flex">
-                        <div class="card-icon"><i class="fa-solid fa-microphone"></i></div>
-                        <div>
-                            <h3>Speaking & Coaching Engagements</h3>
-                            <p class="card-sub">Pengalaman Pembicara & Masterclass</p>
-                        </div>
-                    </div>
-                    <div class="card-body-item">
-                        <ul>
-                            <li><b>Speaker:</b> DPD RI Goes to School ("Anak Muda Melek Politik & Tupoksi Lembaga Negara").</li>
-                            <li><b>Keynote Speaker:</b> Pemuda Parlemen Indonesia (Youth Catalyst Program).</li>
-                            <li><b>Guest Speaker & Trainer:</b> Raras Ranggala FE Universitas Mandiri (Public Speaking & Branding Masterclass).</li>
-                            <li><b>Lead Coach:</b> Coaching FKOS Board across 20+ Schools in Subang.</li>
-                            <li><b>Featured Speaker:</b> Webinar Duta Aksi Indonesia Jawa Barat (Anti-Bullying & Stunting).</li>
-                            <li><b>Broadcaster:</b> Podcast Pasundan Ekspress & Radio Benteng Pancasila.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- SOCIAL PROJECTS -->
-                <div class="card">
-                    <div class="card-header-flex">
-                        <div class="card-icon"><i class="fa-solid fa-heart"></i></div>
-                        <div>
-                            <h3>Personal Projects & Social Impact</h3>
-                            <p class="card-sub">Inisiatif Sosial & Edukasi</p>
-                        </div>
-                    </div>
-                    <div class="card-body-item">
-                        <h4>"Cha Is Here!" (Media Edukasi & Pemberdayaan Pemuda)</h4>
-                        <p class="time">Founder & Creative Producer</p>
-                        <ul>
-                            <li>Platform multimedia pengembang diri untuk pelajar Subang di IG, YT, TikTok, & Spotify.</li>
-                        </ul>
-                    </div>
-                    <div class="card-body-item">
-                        <h4>Relawan Kemanusiaan</h4>
-                        <ul>
-                            <li><b>Badan Wakaf Al-Qur'an (BWA):</b> Bantuan sosial & donasi Palestina.</li>
-                            <li><b>Klinik Muhammadiyah Subang:</b> Panitia Sunat Massal Gratis.</li>
-                            <li><b>FKUB Subang:</b> Duta Pemuda Kerukunan Antar Umat Beragama.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- KONTAK -->
-        <section class="contact-section" id="contact">
-            <div class="contact-grid">
-                <div>
-                    <h2>Mari Berkolaborasi!</h2>
-                    <p style="color: var(--text-muted); margin-top: 10px; margin-bottom: 20px;">
-                        Silakan hubungi saya untuk keperluan Master of Ceremony (MC), pembicara Public Speaking / Personal Branding, kolaborasi media, atau kegiatan sosial.
-                    </p>
-                    <p style="font-size: 0.9rem; color: var(--primary-dark); font-weight: 600;">
-                        <i class="fa-solid fa-envelope"></i> nurillahauliyasinalisa@gmail.com
-                    </p>
-                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 5px;">
-                        <i class="fa-solid fa-location-dot"></i> Subang, Jawa Barat, Indonesia
-                    </p>
-                </div>
-                <div>
-                    <form action="mailto:nurillahauliyasinalisa@gmail.com" method="POST" enctype="text/plain">
-                        <div class="form-group">
-                            <label>Nama Lengkap</label>
-                            <input type="text" name="Nama" placeholder="Nama Anda" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Email Anda</label>
-                            <input type="email" name="Email" placeholder="email@contoh.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Pesan / Keperluan Undangan</label>
-                            <textarea name="Pesan" rows="4" placeholder="Tuliskan pesan kolaborasi Anda..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn-submit">Kirim Pesan Email</button>
-                    </form>
-                </div>
-            </div>
-        </section>
     </div>
 
-    <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 Alisa Nurillah Auliyasin. Interactive Portfolio & CV.</p>
     </footer>
 
 </body>
 </html>
+         
